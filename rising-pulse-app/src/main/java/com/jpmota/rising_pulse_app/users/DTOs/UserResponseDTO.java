@@ -4,8 +4,8 @@ import com.jpmota.rising_pulse_app.users.enums.UserRoleEnum;
 import lombok.Builder;
 
 @Builder
-public record UserRecordDTO(
-        int id,
+public record UserResponseDTO(
+        long id,
         String name,
         String email,
         UserRoleEnum role

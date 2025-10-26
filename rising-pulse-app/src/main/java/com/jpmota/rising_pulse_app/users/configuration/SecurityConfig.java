@@ -12,6 +12,13 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
+    private static final String[] SWAGGER_WHITELIST = {
+            "/v3/api-docs/**", // O JSON/YAML da especificação OpenAPI
+            "/swagger-ui/**",  // O frontend do Swagger UI
+            "/swagger-ui.html"
+    };
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -21,9 +28,12 @@ public class SecurityConfig {
                 // 2. Configura as regras de autorização
                 .authorizeHttpRequests(authorize -> authorize
                         // 3. Permite requisições POST para "/user" publicamente
+                        .requestMatchers(SWAGGER_WHITELIST).permitAll()
                         // (O / a mais no seu POST, "//user", será normalizado para "/user")
-                        .requestMatchers(HttpMethod.POST, "/user").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/user").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/user/**").permitAll()
+                        .requestMatchers(HttpMethod.PUT, "/user/**").permitAll()
+                        .requestMatchers(HttpMethod.PATCH, "/user/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/user/**").permitAll()
                         .requestMatchers(HttpMethod.DELETE, "/user/**").permitAll()
 
                         // 4. Exige autenticação para todas as outras requisições
