@@ -1,6 +1,6 @@
-package com.jpmota.rising_pulse_app.users.entities;
+package com.jpmota.rising_pulse_app.domain.entities.user;
 
-import com.jpmota.rising_pulse_app.users.enums.UserRoleEnum;
+import com.jpmota.rising_pulse_app.domain.enums.user.UserRoleEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.Getter;

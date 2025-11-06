@@ -1,11 +1,11 @@
-package com.jpmota.rising_pulse_app.users.service;
+package com.jpmota.rising_pulse_app.domain.service.user;
 
 
-import com.jpmota.rising_pulse_app.users.DTOs.CreateUserRecordDTO;
-import com.jpmota.rising_pulse_app.users.DTOs.UpdateUserRecordDTO;
-import com.jpmota.rising_pulse_app.users.DTOs.UserResponseDTO;
-import com.jpmota.rising_pulse_app.users.entities.UserEntity;
-import com.jpmota.rising_pulse_app.users.repositories.UserRepository;
+import com.jpmota.rising_pulse_app.DTOs.user.CreateUserRecordDTO;
+import com.jpmota.rising_pulse_app.DTOs.user.UpdateUserRecordDTO;
+import com.jpmota.rising_pulse_app.DTOs.user.UserResponseDTO;
+import com.jpmota.rising_pulse_app.domain.entities.user.UserEntity;
+import com.jpmota.rising_pulse_app.domain.repositories.user.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

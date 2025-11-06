@@ -1,4 +1,4 @@
-package com.jpmota.rising_pulse_app.users.configuration;
+package com.jpmota.rising_pulse_app.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

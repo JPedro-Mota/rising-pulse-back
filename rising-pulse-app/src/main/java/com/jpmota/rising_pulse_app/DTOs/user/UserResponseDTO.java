@@ -1,6 +1,6 @@
-package com.jpmota.rising_pulse_app.users.DTOs;
+package com.jpmota.rising_pulse_app.DTOs.user;
 
-import com.jpmota.rising_pulse_app.users.enums.UserRoleEnum;
+import com.jpmota.rising_pulse_app.domain.enums.user.UserRoleEnum;
 import lombok.Builder;
 
 @Builder
